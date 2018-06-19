@@ -1,0 +1,21 @@
+<div>
+  <article *ngIf="!isLogged" class="message is-warning">
+    <div class="message-header">
+      <p>Bienvenidos!</p>
+      <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body is-warning">
+      Debes registrarte o iniciar sesión para poder continuar a realizar los ejercicios!
+    </div>
+  </article>
+  <div *ngIf=!isLogged id="app"></div>
+  <div *ngIf="showZeroExer" class="notification is-warning has-text-centered">
+    <button class="delete"></button>
+    No tienes ningún ejercicio todavía, anímate a hacer alguno amigo!
+  </div>
+  <div *ngIf="isLogged">
+    <app-ejercicio *ngFor="let ejercicio of ejercicios " [ejercicio]="ejercicio"></app-ejercicio>
+  </div>
+
+
+</div>

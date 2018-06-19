@@ -1,0 +1,12 @@
+footer {
+  background-color: rgb(144, 220, 255) !important;
+  padding: 0 !important;
+}
+
+footer label {
+  color: rgb(117, 117, 117);
+}
+
+footer h2 {
+  color: tomato;
+}

@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <section class="section">
+        <h2 class="title has-text-centered">Login</h2>
+        <div class="field">
+          <label class="label">Email </label>
+          <div class="control">
+            <input class="input" type="email" [(ngModel)]="this.email" [disabled]="isLogged" appRainbow>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Contraseña</label>
+          <div class="control">
+            <input class="input" type="password" [(ngModel)]="this.password" [disabled]="isLogged" appRainbow>
+          </div>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-success" (click)="login()" [disabled]="isLogged">
+              Login
+            </button>
+          </p>
+        </div>
+
+      </section>
+    </div>
+    <div class="column">
+      <section class="section">
+        <h2 class="title has-text-centered">Sign up</h2>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <input class="input" type="email" [(ngModel)]="nEmail" [disabled]="isLogged" appRainbow>
+        </div>
+
+        <div class="field">
+          <label class="label">Username</label>
+          <input class="input" type="text" [(ngModel)]="nName" [disabled]="isLogged" appRainbow>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <input class="input" type="password" [(ngModel)]="nPassword" [disabled]="isLogged" appRainbow>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-info" (click)="register()" [disabled]="isLogged">
+              Register!
+            </button>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

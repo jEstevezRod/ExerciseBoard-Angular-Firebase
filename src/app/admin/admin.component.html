@@ -1,0 +1,56 @@
+<div class="box admin">
+  <p class="title has-text-centered">Student panel</p>
+
+  <div class="field">
+    <label class="label">Tema: </label>
+    <div class="control">
+      <div class="select">
+        <select [(ngModel)]="tema" required>
+          <option value="">Selecciona un tema</option>
+          <option value="tema 1">Tema 1 - Explotación de Sistemas Informáticos</option>
+          <option value="tema 2">Tema 2 - Sistemas Operativos. Gestión de Procesos y Memoria</option>
+          <option value="tema 3">Tema 3 - Redes de computadores</option>
+          <option value="tema 4">Tema 4 - Instalación de Sistemas Operativos Libres</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Worksheet name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Nombre de la relación" [(ngModel)]="worksheet" required>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Enunciado</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Enunciado del ejercicio" [(ngModel)]="enunciado" required>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Solución</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Introduce la solución aqui..." [(ngModel)]="solucion"></textarea>
+    </div>
+  </div>
+
+
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-success" (click)="addExer()">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-danger" (click)="clear()">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="notification is-danger has-text-centered" *ngIf="showNotification">
+  <button class="delete"></button>
+  Debe rellenar todos los campos!
+</div>
